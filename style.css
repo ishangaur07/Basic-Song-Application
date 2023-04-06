@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+body{
+    background-color: rgb(26, 26, 26);
+    color: white;
+
+}
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 100px;
+    background-color: black;
+    width: 100%;
+    height: 80px;
+}
+.hamburger{
+    display: none;
+}
+.nav-bar ul{
+  display: flex;
+}
+
+.nav-bar ul li a {
+    display: block;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    padding: 10px 25px;
+    border-radius: 50px;
+    transition: 0.2s;
+    margin: 0 5px;
+}
+.songList h1{
+    font-family:'Roboto Slab', serif !important;
+}
+.container{
+    min-height: 72vh;
+    background-color: rgb(60, 60, 60);
+    display: flex;
+    width: 70%;
+    margin:23px auto;
+    border-radius: 12px;
+    padding: 34px;
+    background-image: url(image_1.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.mainPlay{
+    position: sticky;
+    height: 230px;
+    background-color: rgb(9, 9, 9);
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.progressBar{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+#progressBar {
+    width:60%;
+}
+.icons{
+    margin-top: 10px;
+}
+.icons i{
+    font-size: 40px;
+    margin: 14px 0;
+    cursor: pointer;
+}
+
+.songItemContainer{
+    margin: 40px 0;
+}
+.songItem{
+    height:49px;
+    display: flex;
+    background-color: rgb(238, 238, 238);
+    width: 76%;
+    color: black;
+    margin: 12px 0;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 22px;
+    
+}
+
+.songItem img{
+    width: 43px;
+    margin: 0 10px 0;
+    border-radius: 22px;
+}
+
+.time{
+    margin: 0 10px 0 0;
+    align-items: center;
+    font-size: 18px;
+    margin-left: 10px;
+    vertical-align: middle;
+}
+
+.songListPlay i{
+    font-size: 20px;
+    margin: 0 30px 0 0;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.songInfo{
+    position: absolute;
+    left: 18vw;
+    font-family:'Roboto Slab', serif;
+}
+
+.songInfo img{
+    opacity: 0;
+    transition: opacity 0.7s;
+}
+
+#songNameMaster{
+    opacity: 0;
+}
+
+
+@media only screen and (max-width:1320){
+    header{
+        padding: 0 50px;
+    }
+    
+}
+@media only screen and (max-width:1100px) {
+    header {
+        padding: 0 30px;
+    }
+}
+
+@media only screen and (max-width:918px) {
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .hamburger .line {
+        width: 30px;
+        height: 3px;
+        background: rgb(255, 255, 255);
+        margin: 6px 0;
+    }
+
+    .nav-bar {
+        height: 0;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background-color: rgb(255, 255, 255);
+        transition: 0.5s;
+        overflow: hidden;
+    }
+
+    .nav-bar.active {
+        height: 200px;
+        background-color: rgb(255, 255, 255);
+    }
+
+    .nav-bar ul {
+        display: block;
+        width: fit-content;
+        margin: 50px auto 0 auto;
+        text-align: center;
+        transition: 0.5s;
+        opacity: 0;
+    }
+
+    .nav-bar.active ul {
+        opacity: 1;
+    }
+
+    .nav-bar ul li a {
+        margin-bottom: 10px;
+        color: black;
+    }
+
+}
+
+@media only screen and (max-width:731px) {
+    .songName{
+        font-size: 15px;
+    }
+    .time{
+        font-size: 15px;
+    }
+    .songListPlay i{
+        font-size:18px;
+    }
+}
+
+@media only screen and (max-width:693px) {
+    .songName{
+        font-size: 12px;
+    }
+    .time{
+        font-size: 12px;
+    }
+    .songListPlay i{
+        font-size:16px;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    .songItem{
+        width: 100%;
+    }
+    .songItem img{
+        width: 36px;
+    }
+    .songName{
+        font-size: 12px;
+    }
+    .time{
+        font-size: 10px;
+    }
+    .songListPlay i{
+        font-size:16px;
+    }
+}
